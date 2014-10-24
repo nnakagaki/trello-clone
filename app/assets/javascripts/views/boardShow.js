@@ -25,6 +25,9 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
       connectWith: ".connectedSortable",
       placeholder: "ui-state-highlight"
     }).disableSelection();
+
+    this.$( "#sortable-list" ).sortable();
+    this.$( "#sortable" ).disableSelection();
     
     return this;
   },
@@ -44,9 +47,10 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
     var listNewView = new TrelloClone.Views.ListNew({
       model: this.model
     });
-    var $main = $("div#main");
+    var $insert = $("div#create-list-location");
+    $insert.addClass("active")
     this.$("button#create-new-list").remove();
-    $main.append(listNewView.render().$el);
+    $insert.append(listNewView.render().$el);
   },
 
   deleteList: function (event) {

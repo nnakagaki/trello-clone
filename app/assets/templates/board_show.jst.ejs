@@ -8,9 +8,12 @@
         <% return 1 %>
       <% } %>
     <% }) %>
+
+    <ul id="sortable-list">
       
     <% lists.forEach(function (list) { %>
-      <td>
+    <li class="ui-state-default">
+    <td>
       <div class="list" id="list-<%= list.id %>">
         <h3><%= list.title %></h3>
           <ul id="sortable-<%= list.id %>" class="connectedSortable">
@@ -32,15 +35,19 @@
         </button>
         <button 
           id="create-new-card"
-          data-id="<%= list.id %>">Add a card...</button>
+          data-id="<%= list.id %>">Add a card...
+        </button>
       </div>
     </td>
+    </li>
     <% }) %>
+    </ul>
   <% } %>
   
   <td>
     <button class="not-text" id="create-new-list">&nbsp</button>
     <button class="text" id="create-new-list">Add a list...</button>
+    <div id="create-list-location"></div>
   </td>
   
 </tr>

@@ -24,6 +24,7 @@ body, div, ul, li, p, button, h1, h2, h3 {
   font: inherit;
   color: inherit;
   text-decoration: none;
+  font-size: 11pt;
 }
 
 .ui-state-default {
@@ -47,14 +48,22 @@ nav.navbar {
 }
 
 a.navbar-brand {
-  margin: auto;
-  text-align: center;
   color: lightblue;
+  float: right;
+  position: relative;
+  left: -44%;
+  text-align: left;
+  font-family: cursive;
+}
+
+nav ul li {
+  float: right;
+  position: relative;
+  left: 8.5%;
 }
 
 button#list-boards {
   float: left;
-  font-size: 11pt;
   height: 100%;
   margin: 5px;
   padding: 10px;
@@ -78,10 +87,6 @@ body {
   width: auto;
 }
 
-p {
-  font-size: 11pt;
-}
-
 h1 {
   margin: 10px;
   padding: 5px;
@@ -98,7 +103,7 @@ h3 {
 div.list {
   float: left;
   margin-left: 10px;
-  background: lightgrey;
+  background: #E3E3E3;
   padding: 10px;
   border-radius: 5px 5px 0 0;
   width: 250px;
@@ -112,7 +117,7 @@ div.card {
   margin-top: 5px;
   margin-bottom: 5px;
   position: relative;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 div.card:hover {
@@ -144,7 +149,6 @@ button#create-new-list {
   padding: 10px;
   border-radius: 5px;
   width: 250px;
-  font-size: 11pt;
   position: absolute;
   transition: opacity 0.15s;
 }
@@ -153,18 +157,16 @@ button#create-new-list.text {
   background: transparent;
   opacity: 0.9;
   color: white;
-  font-size: 11pt;
   text-align: left;
   position: relative;
 }
 
 button#create-new-card {
-  background: lightgrey;
+  background: #E3E3E3;
   margin-top: 10px;
   padding: 10px;
   border-radius: 0 0 5px 5px;
   width: 100%;
-  font-size: 11pt;
   text-align: left;
   position: absolute;
   left: 0;
@@ -173,7 +175,40 @@ button#create-new-card {
 
 button#create-new-card:hover {
   opacity: 1;
-  background: #A4A4A4;
+  background: #BABABA;
   color: black;
   text-decoration: underline;
+}
+
+div#create-list-location {
+  display: none;
+  width: 250px;
+  float: left;
+  margin-left: 10px;
+  background: #E3E3E3;
+  padding: 3px;
+  border-radius: 5px;
+  width: 250px;
+  position: relative;
+}
+
+div#create-list-location.active {
+  display: block;
+}
+
+input#list-title {
+  width: 100%;
+  font-size: 12pt;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 5px;
+  background: #A4A4A4;
+  margin-bottom: 5px;
+}
+
+button#create-list {
+  background: green;
+  padding: 5px 18px 5px 15px;
+  border-radius: 5px;
+  color: white;
 }
