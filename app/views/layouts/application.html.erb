@@ -3,12 +3,24 @@
 <head>
   <title>Trello Clone</title>
   <%= javascript_include_tag "application" %>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <script>
+  $("body").on("dblclick", function (event) {
+  });
+
+  $("body").on("click", function (event) {
+    if (event.target === $("div#main")[0]) {
+      $("div#dblclick-event").remove();
+    }
+  });
+  </script>
+
   <%= render partial: "layouts/header" %>
-  
+
   <%= yield %>
 </body>
 </html>

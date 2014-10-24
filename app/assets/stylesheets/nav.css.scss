@@ -1,0 +1,54 @@
+nav.navbar {
+  background: rgb(30,99,139);
+  border: 0;
+  border-radius: 0;
+  height: 40px;
+  width: 100vw;
+  right: 0;
+}
+
+a.navbar-brand {
+  color: lightblue;
+  float: right;
+  position: relative;
+  left: -44%;
+  text-decoration: none;
+  text-align: left;
+  font-family: cursive;
+  font-size: 16pt;
+  margin-top: 5px;
+}
+
+a.navbar-brand:hover {
+  color: white;
+};
+
+nav ul li {
+  float: right;
+  position: relative;
+  left: 105px;
+  background: rgb(96,144,173);
+  border-radius: 5px;
+  margin: 4px;
+  padding: 7px;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li:hover {
+  background: rgb(106,154,183);
+}
+
+button#list-boards {
+  float: left;
+  margin: 4px;
+  padding: 7px;
+  background: rgb(96,144,173);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+button#list-boards:hover {
+  background: rgb(106,154,183);
+}

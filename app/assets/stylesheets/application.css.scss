@@ -8,88 +8,55 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require jquery.ui.all
- *= require_tree .
+ *= require_self
  */
 
-@import "bootstrap";
+@import "reset";
+@import "nav";
+@import "index";
+@import "dblclick";
+
+//@import "bootstrap";
 @import "font-awesome";
 
-body, div, ul, li, p, button, h1, h2, h3 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  color: inherit;
-  text-decoration: none;
-  font-size: 11pt;
-}
-
-.ui-state-default {
-  border: none !important;
-  background: none !important;
-}
-
-.ui-state-highlight {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background: grey !important;
-  border: 0 !important;
-  height: 38px;
-  border-radius: 5px;
-}
-
-nav.navbar {
-  background: rgb(30,99,139);
-  border: 0;
-  border-radius: 0;
-}
-
-a.navbar-brand {
-  color: lightblue;
-  float: right;
-  position: relative;
-  left: -44%;
-  text-align: left;
-  font-family: cursive;
-}
-
-nav ul li {
-  float: right;
-  position: relative;
-  left: 8.5%;
-}
-
-button#list-boards {
-  float: left;
+html {
   height: 100%;
-  margin: 5px;
-  padding: 10px;
-  background: rgb(96,144,173);
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-}
-
-li {
-  list-style: none;
-}
-
-tr { 
-	vertical-align: top;
+  overflow: hidden;
 }
 
 body {
-  background: rgb(34,113,159);
-  overflow-x: scroll;
+  position: absolute;
   width: auto;
+  height: 100%;
+}
+
+body.board-show {
+  background: rgb(34,113,159);
+}
+
+div#board-show {
+  height: 100%;
+}
+
+div#for-dblclick {
+  height: 100%;
+}
+
+body.board-index {
+  background: rgb(255,255,255);
+}
+
+div#main {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  top: 40px;
+  overflow-x: auto;
 }
 
 h1 {
-  margin: 10px;
-  padding: 5px;
+  padding: 15px;
   font-size: 16pt;
   color: white;
 }
@@ -197,7 +164,7 @@ div#create-list-location.active {
 }
 
 input#list-title {
-  width: 100%;
+  width: 95%;
   font-size: 12pt;
   border-radius: 5px;
   border: 1px solid grey;
@@ -206,9 +173,42 @@ input#list-title {
   margin-bottom: 5px;
 }
 
+.ui-sortable-helper {
+  transform: rotate(5deg);
+}
+
 button#create-list {
-  background: green;
+  background-image: linear-gradient(rgb(35,167,40),rgb(27,127,29));
   padding: 5px 18px 5px 15px;
   border-radius: 5px;
   color: white;
+}
+
+::-webkit-input-placeholder {
+  color: grey;
+}
+
+div#card-create {
+  position: absolute;
+  left: 0;
+  width: 250px;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  background: #E3E3E3;
+}
+
+textarea#card-title {
+  width: 98.5%;
+  height: 50px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 0 0.5em grey;
+}
+
+button#create-card {
+  background-image: linear-gradient(rgb(35,167,40),rgb(27,127,29));
+  padding: 5px 18px 5px 15px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 10px;
 }

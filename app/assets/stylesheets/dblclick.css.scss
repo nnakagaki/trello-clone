@@ -1,0 +1,32 @@
+div#dblclick-event {
+  position: fixed;
+  background: white;
+  border-radius: 5px;
+  height: 115px;
+
+  input {
+    display: block;
+    margin: 10px;
+    height: 20px;
+    width: 200px;
+    border-radius: 5px;
+    border: 0;
+    background: white;
+    box-shadow: 0 0 0.5em grey;
+  }
+
+  h1 {
+    color: black;
+    font-size: 12pt;
+    text-align: center;
+    padding: 5px;
+  }
+
+  hr {
+    margin: 0;
+  }
+
+  button {
+    margin-left: 10px;
+  }
+}
