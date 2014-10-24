@@ -26,8 +26,10 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
       placeholder: "ui-state-highlight"
     }).disableSelection();
 
-    this.$( "#sortable-list" ).sortable();
-    this.$( "#sortable" ).disableSelection();
+    $( "#sortable-list" ).sortable({
+      placeholder: "ui-state-highlight"
+    })
+    $( "#sortable" ).disableSelection();
     
     return this;
   },
