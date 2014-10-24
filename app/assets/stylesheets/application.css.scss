@@ -1,0 +1,179 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.ui.all
+ *= require_tree .
+ */
+
+@import "bootstrap";
+@import "font-awesome";
+
+body, div, ul, li, p, button, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.ui-state-default {
+  border: none !important;
+  background: none !important;
+}
+
+.ui-state-highlight {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: grey !important;
+  border: 0 !important;
+  height: 38px;
+  border-radius: 5px;
+}
+
+nav.navbar {
+  background: rgb(30,99,139);
+  border: 0;
+  border-radius: 0;
+}
+
+a.navbar-brand {
+  margin: auto;
+  text-align: center;
+  color: lightblue;
+}
+
+button#list-boards {
+  float: left;
+  font-size: 11pt;
+  height: 100%;
+  margin: 5px;
+  padding: 10px;
+  background: rgb(96,144,173);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+tr { 
+	vertical-align: top;
+}
+
+body {
+  background: rgb(34,113,159);
+  overflow-x: scroll;
+  width: auto;
+}
+
+p {
+  font-size: 11pt;
+}
+
+h1 {
+  margin: 10px;
+  padding: 5px;
+  font-size: 16pt;
+  color: white;
+}
+
+h3 {
+  margin-left: 3px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+div.list {
+  float: left;
+  margin-left: 10px;
+  background: lightgrey;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  width: 250px;
+  position: relative;
+}
+
+div.card {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  word-wrap: break-word
+}
+
+div.card:hover {
+  background: #F2F2F2;
+}
+
+button#delete-card {
+  display: none;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+button#delete-card.active {
+  display: block;
+}
+
+button#delete-list {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+button#create-new-list {
+  float: left;
+  margin-left: 10px;
+  background: black;
+  opacity: 0.15;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 11pt;
+  position: absolute;
+  transition: opacity 0.15s;
+}
+
+button#create-new-list.text {
+  background: transparent;
+  opacity: 0.9;
+  color: white;
+  font-size: 11pt;
+  text-align: left;
+  position: relative;
+}
+
+button#create-new-card {
+  background: lightgrey;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  font-size: 11pt;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  color: grey;
+}
+
+button#create-new-card:hover {
+  opacity: 1;
+  background: #A4A4A4;
+  color: black;
+  text-decoration: underline;
+}

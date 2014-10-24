@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="navbar-header">
+    <button id="list-boards">Boards</button>
+    <a class="navbar-brand" href="#">Trello Clone</a>
+  </div>
+    <ul>
+    <% if signed_in? %>
+      <!-- <li id='add-dropdown' class='dropdown'>
+        <button
+          class='dropdown-toggle navbar-btn btn btn-primary'
+          data-toggle='dropdown'><span class='glyphicon glyphicon-plus'></span>
+        </button>
+      </li> -->
+      <li><%= button_to "Sign out", session_url, method: :delete, class: "btn btn-primary navbar-btn" %></li>
+    <% else %>
+      <li><%= link_to "Log in", new_session_url %></li>
+      <li><%= link_to "Sign up", new_user_url %></li>
+    <% end %>
+    </ul>
+</nav>
+
+<% if flash[:errors] %>
+<div class="alert alert-warning alert-dismissible" role="alert">
+   <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<%= flash[:errors].join("<br>").html_safe %>
+</div>
+<% end %>

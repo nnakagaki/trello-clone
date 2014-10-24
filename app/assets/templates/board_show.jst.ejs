@@ -1,0 +1,47 @@
+<h1><%= title %></h1>
+<table>
+  <tr>
+  <% if (lists) { %>
+    
+    <% lists.sort(function(a,b) { %>
+      <% if (a.created_at > b.created_at) { %>
+        <% return 1 %>
+      <% } %>
+    <% }) %>
+      
+    <% lists.forEach(function (list) { %>
+      <td>
+      <div class="list" id="list-<%= list.id %>">
+        <h3><%= list.title %></h3>
+          <ul id="sortable-<%= list.id %>" class="connectedSortable">
+            <% list.cards.forEach(function (card) { %>
+            <li class="ui-state-default">
+            <div class="card">
+              <p><%= card.title %></p>
+              <button id="delete-card" 
+                data-list-id="<%= list.id %>"
+                data-card-id="<%= card.id %>">
+                <span class="ui-icon ui-icon-close"></span>
+              </button>
+            </div>
+            </li>
+            <% }) %>
+          </ul>
+        <button id="delete-list" data-id="<%= list.id %>">
+          <span class="ui-icon ui-icon-close"></span>
+        </button>
+        <button 
+          id="create-new-card"
+          data-id="<%= list.id %>">Add a card...</button>
+      </div>
+    </td>
+    <% }) %>
+  <% } %>
+  
+  <td>
+    <button class="not-text" id="create-new-list">&nbsp</button>
+    <button class="text" id="create-new-list">Add a list...</button>
+  </td>
+  
+</tr>
+</table>
