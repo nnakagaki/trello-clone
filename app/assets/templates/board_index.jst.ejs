@@ -1,6 +1,6 @@
 <h1>My Boards</h1>
 <ul>
-  <li id="dummy">$nbsp</li>
+  <li id="dummy"></li>
   <% boards.sortBy("created_at").forEach(function (board) { %>
     <li class="jump-to" id="<%= board.id %>"><a><%= board.escape("title") %></a>
       <button id="delete-board" data-id="<%= board.id %>">

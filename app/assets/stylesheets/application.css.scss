@@ -29,9 +29,14 @@ body {
   position: absolute;
   width: auto;
   height: 100%;
+  font-family: sans-serif;
 }
 
 body.board-show {
+  background: rgb(34,113,159);
+}
+
+body.board-index {
   background: rgb(34,113,159);
 }
 
@@ -41,10 +46,6 @@ div#board-show {
 
 div#for-dblclick {
   height: 100%;
-}
-
-body.board-index {
-  background: rgb(255,255,255);
 }
 
 div#main {
@@ -211,4 +212,30 @@ button#create-card {
   border-radius: 5px;
   color: white;
   margin-top: 10px;
+}
+
+div.sign-up, div.sign-in {
+  width: 150px;
+  height: 300px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    label {
+      color: white;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 144px;
+      border-radius: 5px;
+      border: 0;
+      padding: 3px;
+    }
+  }
 }
