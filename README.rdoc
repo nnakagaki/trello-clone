@@ -4,15 +4,14 @@
 
 This app is a clone of https://trello.com/ made in rails with backbone.js
 
-to run locally
+== To run locally
 * download zip-file or run <tt>git clone https://github.com/nnakagaki/Portfolio.git</tt>
 * <tt>bundle install</tt>
 * <tt>bundle exec rake db:create db:migrate</tt>
 * <tt>rails server</tt>
 * go to localhost:3000 to view page
 
-Sortable lists and cards using JQuery UI
-
-Facebook login using OmniAuth
-
-User authentication email with ActionMailer
+== Features
+* Sortable lists and cards using JQuery UI
+* Facebook login using OmniAuth
+* User authentication email with ActionMailer
