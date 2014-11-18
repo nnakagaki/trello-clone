@@ -2,7 +2,7 @@
 
 == live at https://norris-trello-clone.herokuapp.com
 
-This app is a clone of https://trello.com/ made in rails with backbone.js
+ This app is a clone of https://trello.com/ made in rails with backbone.js
 
 to run locally
 * download zip-file or run <tt>git clone https://github.com/nnakagaki/Portfolio.git</tt>
@@ -11,6 +11,6 @@ to run locally
 * <tt>rails server</tt>
 * go to localhost:3000 to view page
 
-Sortable lists and cards using JQuery UI
-Facebook login using OmniAuth
-User authentication email with ActionMailer
+ Sortable lists and cards using JQuery UI
+ Facebook login using OmniAuth
+ User authentication email with ActionMailer
