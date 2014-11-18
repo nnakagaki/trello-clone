@@ -5,7 +5,7 @@
 This app is a clone of https://trello.com/ made in rails with backbone.js
 
 == To run locally
-* download zip-file or run <tt>git clone https://github.com/nnakagaki/Portfolio.git</tt>
+* download zip-file or run <tt>git clone https://github.com/nnakagaki/trello-clone.git</tt>
 * <tt>bundle install</tt>
 * <tt>bundle exec rake db:create db:migrate</tt>
 * <tt>rails server</tt>
